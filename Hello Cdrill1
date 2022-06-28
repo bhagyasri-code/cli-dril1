@@ -5,21 +5,21 @@ cd hello
  ls
 five
  cd five
-~/hello/five$ mkdir six
-~/hello/five$ ls
+ mkdir six
+ ls
 six
-~/hello/five$ cd six
-~/hello/five/six$ touch c.txt
-~/hello/five/six$ mkdir seven
-~/hello/five/six$ ls
+ cd six
+ touch c.txt
+ mkdir seven
+ ls
 c.txt  seven
-~/hello/five/six$ cd seven
-~/hello/five/six/seven$ touch error.log
-~/hello/five/six/seven$ ls
+ cd seven
+ touch error.log
+ ls
 error.log
-~/hello/five/six/seven$ cd ..
-~/hello/five/six$ cd ..
-~/hello/five$ cd ..
+ cd ..
+ cd ..
+ cd ..
  tree
 .
 └── five
@@ -33,28 +33,28 @@ error.log
  ls
 five  one
  cd one
-~/hello/one$ touch a.txt b.txt
-~/hello/one$ mkdir two
-~/hello/one$ ls
+ touch a.txt b.txt
+ mkdir two
+ ls
 a.txt  b.txt  two
-~/hello/one$ cd two
-~/hello/one/two$ touch d.txt
-~/hello/one/two$ mkdir three
-~/hello/one/two$ ls
+ cd two
+ touch d.txt
+ mkdir three
+ ls
 d.txt  three
-~/hello/one/two$ cd three
-~/hello/one/two/three$ touch e.txt
-~/hello/one/two/three$ mkdir four
-~/hello/one/two/three$ ls
+ cd three
+ touch e.txt
+ mkdir four
+ ls
 e.txt  four
-~/hello/one/two/three$ cd four
-~/hello/one/two/three/four$ touch access.log
-~/hello/one/two/three/four$ ls
+ cd four
+ touch access.log
+ ls
 access.log
-~/hello/one/two/three/four$ cd ..
-~/hello/one/two/three$ cd ..
-~/hello/one/two$ cd ..
-~/hello/one$ cd ..
+ cd ..
+ cd ..
+ cd ..
+ cd ..
  tree
 .
 ├── five
@@ -102,7 +102,7 @@ TASK 2 : Delete all the files having the .log extension
 TASK 3 Add the following content to a.txt
 
 
-~/hello/one$ cat >a.txt <<-"Unix is a family of multitasking, multiuser computer operating 
+ cat >a.txt <<-"Unix is a family of multitasking, multiuser computer operating 
 systems that derive from the original AT&T Unix, development 
 starting in the 1970s at the Bell Labs research center by Ken 
 Thompson, Dennis Ritchie, and others."
@@ -146,13 +146,13 @@ uno
 TASK 6:Move a.txt to the two directory.
             
             
-           ~/hello/uno$ mv a.txt two
-~/hello/uno$ ls
+            mv a.txt two
+ ls
 b.txt  two
-~/hello/uno$ cd  two
-~/hello/uno/two$ ls
+ cd  two
+ ls
 a.txt  d.txt  three
-~/hello/uno/two$ tree
+ tree
 .
 ├── a.txt
 ├── d.txt
@@ -161,8 +161,8 @@ a.txt  d.txt  three
     └── four
 
 2 directories, 3 files
-~/hello/uno/two$ cd ..
-~/hello/uno$ cd ..
+ cd ..
+ cd ..
  tree
 .
 └── uno
