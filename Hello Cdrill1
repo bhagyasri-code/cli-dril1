@@ -1,0 +1,178 @@
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~$ mkdir hello
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~$ ls
+ Desktop   Documents   Downloads   hello  'Hello Cdrill1'   Music   Pictures   Public   snap   Templates   Videos
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~$ cd hello
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ mkdir five
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ ls
+five
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ cd five
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/five$ mkdir six
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/five$ ls
+six
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/five$ cd six
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/five/six$ touch c.txt
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/five/six$ mkdir seven
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/five/six$ ls
+c.txt  seven
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/five/six$ cd seven
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/five/six/seven$ touch error.log
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/five/six/seven$ ls
+error.log
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/five/six/seven$ cd ..
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/five/six$ cd ..
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/five$ cd ..
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ tree
+.
+└── five
+    └── six
+        ├── c.txt
+        └── seven
+            └── error.log
+
+3 directories, 2 files
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ mkdir one
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ ls
+five  one
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ cd one
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one$ touch a.txt b.txt
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one$ mkdir two
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one$ ls
+a.txt  b.txt  two
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one$ cd two
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one/two$ touch d.txt
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one/two$ mkdir three
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one/two$ ls
+d.txt  three
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one/two$ cd three
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one/two/three$ touch e.txt
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one/two/three$ mkdir four
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one/two/three$ ls
+e.txt  four
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one/two/three$ cd four
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one/two/three/four$ touch access.log
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one/two/three/four$ ls
+access.log
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one/two/three/four$ cd ..
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one/two/three$ cd ..
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one/two$ cd ..
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one$ cd ..
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ tree
+.
+├── five
+│   └── six
+│       ├── c.txt
+│       └── seven
+│           └── error.log
+└── one
+    ├── a.txt
+    ├── b.txt
+    └── two
+        ├── d.txt
+        └── three
+            ├── e.txt
+            └── four
+                └── access.log
+
+7 directories, 7 files
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ 
+
+
+
+
+
+
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ find . -name "*.log" -type f -delete
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ tree
+.
+├── five
+│   └── six
+│       ├── c.txt
+│       └── seven
+└── one
+    ├── a.txt
+    ├── b.txt
+    └── two
+        ├── d.txt
+        └── three
+            ├── e.txt
+            └── four
+
+7 directories, 5 files
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ 
+
+
+
+
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/one$ cat >a.txt <<-"Unix is a family of multitasking, multiuser computer operating 
+systems that derive from the original AT&T Unix, development 
+starting in the 1970s at the Bell Labs research center by Ken 
+Thompson, Dennis Ritchie, and others."
+
+
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ rm -r five
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ ls
+one
+
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ tree
+.
+└── one
+    ├── a.txt
+    ├── b.txt
+    └── two
+        ├── d.txt
+        └── three
+            ├── e.txt
+            └── four
+
+
+
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ mv one uno
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ ls
+uno
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ tree
+.
+└── uno
+    ├── a.txt
+    ├── b.txt
+    └── two
+        ├── d.txt
+        └── three
+            ├── e.txt
+            └── four
+            
+            
+            
+           home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/uno$ mv a.txt two
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/uno$ ls
+b.txt  two
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/uno$ cd  two
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/uno/two$ ls
+a.txt  d.txt  three
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/uno/two$ tree
+.
+├── a.txt
+├── d.txt
+└── three
+    ├── e.txt
+    └── four
+
+2 directories, 3 files
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/uno/two$ cd ..
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello/uno$ cd ..
+home@bhagyasri-laptop:/home/bhagyasri/mountblue$:~/hello$ tree
+.
+└── uno
+    ├── b.txt
+    └── two
+        ├── a.txt
+        ├── d.txt
+        └── three
+            ├── e.txt
+            └── four
+
+4 directories, 4 files
+
+
+
+
+
