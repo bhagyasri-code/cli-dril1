@@ -1,11 +1,10 @@
-~$ mkdir hello
-~$ ls
- Desktop   Documents   Downloads   hello  'Hello Cdrill1'   Music   Pictures   Public   snap   Templates   Videos
-~$ cd hello
-~/hello$ mkdir five
-~/hello$ ls
+mkdir hello
+ls
+cd hello
+ mkdir five
+ ls
 five
-~/hello$ cd five
+ cd five
 ~/hello/five$ mkdir six
 ~/hello/five$ ls
 six
@@ -21,7 +20,7 @@ error.log
 ~/hello/five/six/seven$ cd ..
 ~/hello/five/six$ cd ..
 ~/hello/five$ cd ..
-~/hello$ tree
+ tree
 .
 └── five
     └── six
@@ -30,10 +29,10 @@ error.log
             └── error.log
 
 3 directories, 2 files
-~/hello$ mkdir one
-~/hello$ ls
+ mkdir one
+ ls
 five  one
-~/hello$ cd one
+ cd one
 ~/hello/one$ touch a.txt b.txt
 ~/hello/one$ mkdir two
 ~/hello/one$ ls
@@ -56,7 +55,7 @@ access.log
 ~/hello/one/two/three$ cd ..
 ~/hello/one/two$ cd ..
 ~/hello/one$ cd ..
-~/hello$ tree
+ tree
 .
 ├── five
 │   └── six
@@ -74,15 +73,15 @@ access.log
                 └── access.log
 
 7 directories, 7 files
-~/hello$ 
+ 
 
 
 
 TASK 2 : Delete all the files having the .log extension
 
 
-~/hello$ find . -name "*.log" -type f -delete
-~/hello$ tree
+ find . -name "*.log" -type f -delete
+ tree
 .
 ├── five
 │   └── six
@@ -98,7 +97,7 @@ TASK 2 : Delete all the files having the .log extension
             └── four
 
 7 directories, 5 files
-~/hello$ 
+ 
 
 TASK 3 Add the following content to a.txt
 
@@ -110,11 +109,11 @@ Thompson, Dennis Ritchie, and others."
 
 TASK 4 :delete the directory named five.
 
-~/hello$ rm -r five
-~/hello$ ls
+ rm -r five
+ ls
 one
 
-~/hello$ tree
+ tree
 .
 └── one
     ├── a.txt
@@ -129,10 +128,10 @@ one
 TASK 5 :Rename the one directory to uno.
 
 
-~/hello$ mv one uno
-~/hello$ ls
+ mv one uno
+ ls
 uno
-~/hello$ tree
+ tree
 .
 └── uno
     ├── a.txt
@@ -164,7 +163,7 @@ a.txt  d.txt  three
 2 directories, 3 files
 ~/hello/uno/two$ cd ..
 ~/hello/uno$ cd ..
-~/hello$ tree
+ tree
 .
 └── uno
     ├── b.txt
