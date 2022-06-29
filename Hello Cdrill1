@@ -1,177 +1,38 @@
-mkdir hello
-ls
-cd hello
+ mkdir hello
+ cd hello
  mkdir five
- ls
-five
  cd five
  mkdir six
- ls
-six
  cd six
  touch c.txt
  mkdir seven
- ls
-c.txt  seven
  cd seven
  touch error.log
- ls
-error.log
  cd ..
- cd ..
- cd ..
- tree
-.
-└── five
-    └── six
-        ├── c.txt
-        └── seven
-            └── error.log
-
-3 directories, 2 files
  mkdir one
- ls
-five  one
  cd one
  touch a.txt b.txt
  mkdir two
- ls
-a.txt  b.txt  two
  cd two
  touch d.txt
  mkdir three
- ls
-d.txt  three
  cd three
  touch e.txt
  mkdir four
- ls
-e.txt  four
  cd four
  touch access.log
- ls
-access.log
  cd ..
- cd ..
- cd ..
- cd ..
- tree
-.
-├── five
-│   └── six
-│       ├── c.txt
-│       └── seven
-│           └── error.log
-└── one
-    ├── a.txt
-    ├── b.txt
-    └── two
-        ├── d.txt
-        └── three
-            ├── e.txt
-            └── four
-                └── access.log
-
-7 directories, 7 files
- 
-
-
-
-TASK 2 : Delete all the files having the .log extension
-
 
  find . -name "*.log" -type f -delete
- tree
-.
-├── five
-│   └── six
-│       ├── c.txt
-│       └── seven
-└── one
-    ├── a.txt
-    ├── b.txt
-    └── two
-        ├── d.txt
-        └── three
-            ├── e.txt
-            └── four
-
-7 directories, 5 files
+ cd ..
+ cat >a.txt <<
+ 
+ cd..
+ rm -r five
+ mv one uno
+ cd uno            
+ mv a.txt two
  
 
-TASK 3 Add the following content to a.txt
 
 
- cat >a.txt <<-"Unix is a family of multitasking, multiuser computer operating 
-systems that derive from the original AT&T Unix, development 
-starting in the 1970s at the Bell Labs research center by Ken 
-Thompson, Dennis Ritchie, and others."
-
-TASK 4 :delete the directory named five.
-
- rm -r five
- ls
-one
-
- tree
-.
-└── one
-    ├── a.txt
-    ├── b.txt
-    └── two
-        ├── d.txt
-        └── three
-            ├── e.txt
-            └── four
-
-
-TASK 5 :Rename the one directory to uno.
-
-
- mv one uno
- ls
-uno
- tree
-.
-└── uno
-    ├── a.txt
-    ├── b.txt
-    └── two
-        ├── d.txt
-        └── three
-            ├── e.txt
-            └── four
-            
-
-TASK 6:Move a.txt to the two directory.
-            
-            
-            mv a.txt two
- ls
-b.txt  two
- cd  two
- ls
-a.txt  d.txt  three
- tree
-.
-├── a.txt
-├── d.txt
-└── three
-    ├── e.txt
-    └── four
-
-2 directories, 3 files
- cd ..
- cd ..
- tree
-.
-└── uno
-    ├── b.txt
-    └── two
-        ├── a.txt
-        ├── d.txt
-        └── three
-            ├── e.txt
-            └── four
-
-4 directories, 4 files
