@@ -25,7 +25,7 @@
 
  find . -name "*.log" -type f -delete
  cd ..
- cat >a.txt <<
+ nano a.txt
  
  cd..
  rm -r five
